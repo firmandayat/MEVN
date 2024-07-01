@@ -26,9 +26,11 @@ db.mongoose
 
 app.get("/", (req, res) => {
   res.json({
-    message: "testing",
+    message: "Testing",
   });
 });
+
+require('./app/routes/product.routes')(app)
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
